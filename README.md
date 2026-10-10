@@ -58,6 +58,12 @@ Point it at your `One Pace` series folder:
 python setup.py "/path/to/your/One Pace"
 ```
 
+Metadata defaults to English. To use another available language:
+
+```bash
+python setup.py "/path/to/your/One Pace" --lang es
+```
+
 The script will:
 - Place `tvshow.nfo` at the series root
 - Place `season.nfo` and `poster.png` in each arc folder
@@ -66,6 +72,12 @@ The script will:
 **To overwrite existing metadata:**
 ```bash
 python setup.py "/path/to/your/One Pace" --force
+```
+
+Combine `--force` with `--lang` to replace metadata already installed in another language:
+
+```bash
+python setup.py "/path/to/your/One Pace" --lang es --force
 ```
 
 ### 3. Configure your Jellyfin library

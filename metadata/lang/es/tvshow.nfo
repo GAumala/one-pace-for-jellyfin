@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tvshow>
+  <title>One Pace</title>
+  <showtitle>One Pace</showtitle>
+  <originaltitle>One Piece</originaltitle>
+  <plot>One Pace es un proyecto de fans que recorta el anime de One Piece para acercarlo al ritmo del manga original de Eiichiro Oda. El equipo lo consigue eliminando escenas de relleno que no aparecen en el material fuente. Este proceso requiere una edición y un control de calidad meticulosos para garantizar transiciones y música fluidas.
+
+El proyecto, que comenzó en 2013, es un trabajo continuo hecho con dedicación. Recientemente, su alcance se ha ampliado para incluir subtítulos de alta calidad en varios idiomas, el doblaje en inglés, correcciones de errores de animación y mucho más. También esperamos ofrecer un punto intermedio entre la presentación del anime y la narración del manga para quienes buscan una forma alternativa de disfrutar la historia.</plot>
+  <namedseason number="1">1. Romance Dawn</namedseason>
+  <namedseason number="2">2. Ciudad Orange</namedseason>
+  <namedseason number="3">3. Villa Syrup</namedseason>
+  <namedseason number="4">4. Gaimon</namedseason>
+  <namedseason number="5">5. Baratie</namedseason>
+  <namedseason number="6">6. Arlong Park</namedseason>
+  <namedseason number="7">7. Las aventuras de los Piratas de Buggy</namedseason>
+  <namedseason number="8">8. Loguetown</namedseason>
+  <namedseason number="9">9. Reverse Mountain</namedseason>
+  <namedseason number="10">10. Whisky Peak</namedseason>
+  <namedseason number="11">11. El diario de la lucha de Koby-Meppo</namedseason>
+  <namedseason number="12">12. Little Garden</namedseason>
+  <namedseason number="13">13. Isla de Drum</namedseason>
+  <namedseason number="14">14. Arabasta</namedseason>
+  <namedseason number="15">15. Jaya</namedseason>
+  <namedseason number="16">16. Skypiea</namedseason>
+  <namedseason number="17">17. Long Ring Long Land</namedseason>
+  <namedseason number="18">18. Water Seven</namedseason>
+  <namedseason number="19">19. Enies Lobby</namedseason>
+  <namedseason number="20">20. Post-Enies Lobby</namedseason>
+  <namedseason number="21">21. Thriller Bark</namedseason>
+  <namedseason number="22">22. Archipiélago Sabaody</namedseason>
+  <namedseason number="23">23. Amazon Lily</namedseason>
+  <namedseason number="24">24. Impel Down</namedseason>
+  <namedseason number="25">25. Si fueras a salir de viaje... Las aventuras de los Sombrero de Paja</namedseason>
+  <namedseason number="26">26. Marineford</namedseason>
+  <namedseason number="27">27. Post-War</namedseason>
+  <namedseason number="28">28. Return to Sabaody</namedseason>
+  <namedseason number="29">29. Fishman Island</namedseason>
+  <namedseason number="30">30. Punk Hazard</namedseason>
+  <namedseason number="31">31. Dressrosa</namedseason>
+  <namedseason number="32">32. Zou</namedseason>
+  <namedseason number="33">33. Whole Cake Island</namedseason>
+  <namedseason number="34">34. Reverie</namedseason>
+  <namedseason number="35">35. Wano</namedseason>
+  <namedseason number="36">36. Egghead</namedseason>
+</tvshow>

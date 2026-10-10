@@ -7,7 +7,7 @@ your One Pace video files so Jellyfin displays proper arc names,
 episode titles, and artwork.
 
 Usage:
-    python setup.py "/path/to/your/One Pace/"
+    python setup.py "/path/to/your/One Pace/" [--lang en]
 
 See README.md for full instructions.
 """
@@ -21,6 +21,7 @@ from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).parent
 METADATA_DIR = SCRIPT_DIR / "metadata"
+LANG_DIR = METADATA_DIR / "lang"
 
 VIDEO_EXTENSIONS = {".mkv", ".mp4", ".avi", ".m4v"}
 
@@ -83,16 +84,27 @@ def place_file(src, dst, force):
     return True
 
 
-def process(media_path, force=False):
+def process(media_path, force=False, lang="en"):
     seasons = load_seasons()
+    language_dir = LANG_DIR / lang
     series_dir = Path(media_path)
+
+    if not language_dir.is_dir():
+        available = sorted(
+            directory.name for directory in LANG_DIR.iterdir() if directory.is_dir()
+        )
+        print(
+            f"Error: unsupported language '{lang}'. Available languages: "
+            f"{', '.join(available)}"
+        )
+        return
 
     if not series_dir.is_dir():
         print(f"Error: '{media_path}' is not a valid directory.")
         return
 
     # Place tvshow.nfo at series root
-    tvshow_src = METADATA_DIR / "tvshow.nfo"
+    tvshow_src = language_dir / "tvshow.nfo"
     tvshow_dst = series_dir / "tvshow.nfo"
     if place_file(tvshow_src, tvshow_dst, force):
         print("✓ tvshow.nfo placed at series root")
@@ -121,7 +133,7 @@ def process(media_path, force=False):
             print(f"\n⚠  Could not match arc: '{arc_name}' (folder: {arc_dir.name})")
             continue
 
-        season_meta = METADATA_DIR / "seasons" / str(season_num)
+        season_meta = language_dir / "seasons" / str(season_num)
         if not season_meta.is_dir():
             print(f"\n⚠  No metadata available for season {season_num} ({arc_name})")
             continue
@@ -197,5 +209,10 @@ Examples:
         action="store_true",
         help="Overwrite existing NFO/poster files",
     )
+    parser.add_argument(
+        "--lang",
+        default="en",
+        help="Metadata language to use (default: en)",
+    )
     args = parser.parse_args()
-    process(args.path, force=args.force)
+    process(args.path, force=args.force, lang=args.lang)
